@@ -16,4 +16,17 @@ class BinaryTree {
       } else current = current[side];
     }
   }
+
+  depthFirst(callback) {
+    let {value, left, right} = this;
+    let children = [left, right];
+
+    callback(value);
+
+    children.forEach(child => {
+      if (child !== null) {
+        child.depthFirst(callback)
+      }
+    });
+  }
 }
