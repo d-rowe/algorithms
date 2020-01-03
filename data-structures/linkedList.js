@@ -1,5 +1,3 @@
-// TODO: add remove method
-
 class LinkedList {
   constructor(...elements) {
     this.head = null;
@@ -26,6 +24,31 @@ class LinkedList {
       current.next = node;
       this.tail = node;
     };
+  }
+
+  remove(index) {
+    if (index < 0) return;
+    if (index === 0) return this.removeHead();
+    
+    let current = this.head;
+    let currIndex = 0;
+
+    while (currIndex < index - 1) {
+      if (current === null) return;
+      current = current.next;
+      currIndex += 1;
+    }
+
+    if (current.next === null) return;
+    if (current.next.next === null) {
+      let removedEl = current.next.element;
+      current.next = null;
+      return removedEl;
+    }
+
+    let removedEl = current.next.element;
+    current.next = current.next.next;
+    return removedEl;
   }
 
   removeHead() {
@@ -123,5 +146,3 @@ class Node {
     this.next = null;
   }
 }
-
-module.exports = LinkedList;
