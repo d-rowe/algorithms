@@ -1,11 +1,16 @@
 class BinaryTree {
-  constructor(value) {
+  constructor(value = null) {
     this.value = value;
     this.left = null;
     this.right = null;
   }
 
   add(value) {
+    if (this.value === null) {
+      this.value = value;
+      return;
+    }
+
     let current = this;
 
     while (current.value !== null) {
@@ -25,7 +30,7 @@ class BinaryTree {
 
     children.forEach(child => {
       if (child !== null) {
-        child.depthFirst(callback)
+        child.depthFirst(callback);
       }
     });
   }
