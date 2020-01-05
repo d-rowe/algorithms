@@ -1,0 +1,22 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "algorithm practice",
+  "main": "recursion.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-rowe/algorithms.git"
+  },
+  "author": "Daniel Rowe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d-rowe/algorithms/issues"
+  },
+  "homepage": "https://github.com/d-rowe/algorithms#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.0"
+  }
+}
