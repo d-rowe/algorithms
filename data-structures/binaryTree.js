@@ -23,7 +23,7 @@ class BinaryTree {
   }
 
   depthFirst(callback) {
-    let {value, left, right} = this;
+    let { value, left, right} = this;
     let children = [left, right];
 
     callback(value);
@@ -33,5 +33,33 @@ class BinaryTree {
         child.depthFirst(callback);
       }
     });
+  }
+
+  free() {
+    this.value = null;
+    this.left = null;
+    this.right = null;
+  }
+
+  balance() {
+    let elements = [];
+    this.depthFirst(el => elements.push(el));
+    this.free();
+
+    const addMiddle = nodeArr => {
+      if (nodeArr.length === 0) return;
+
+      const middleIndex = Math.floor((nodeArr.length - 1) / 2);
+
+      this.add(nodeArr[middleIndex]);
+
+      const leftArr = nodeArr.slice(0, middleIndex);
+      const rightArr = nodeArr.slice(middleIndex + 1);
+      
+      addMiddle(leftArr);
+      addMiddle(rightArr);
+    }
+
+    addMiddle(elements);
   }
 }
