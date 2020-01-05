@@ -52,14 +52,13 @@ class BinaryTree {
       const middleIndex = Math.floor((nodeArr.length - 1) / 2);
 
       this.add(nodeArr[middleIndex]);
-
-      const leftArr = nodeArr.slice(0, middleIndex);
-      const rightArr = nodeArr.slice(middleIndex + 1);
       
-      addMiddle(leftArr);
-      addMiddle(rightArr);
+      addMiddle(nodeArr.slice(0, middleIndex));
+      addMiddle(nodeArr.slice(middleIndex + 1));
     }
 
     addMiddle(elements);
   }
 }
+
+module.exports = BinaryTree;
