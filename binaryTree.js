@@ -50,7 +50,6 @@ class BinaryTree {
       if (nodeArr.length === 0) return;
 
       const middleIndex = Math.floor((nodeArr.length - 1) / 2);
-
       this.add(nodeArr[middleIndex]);
       
       addMiddle(nodeArr.slice(0, middleIndex));

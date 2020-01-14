@@ -1,3 +1,5 @@
+// TODO: refactor to es6
+
 var getIndexBelowMaxForKey = function(str, max) {
   var hash = 0;
   for (var i = 0; i < str.length; i++) {
