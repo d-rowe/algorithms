@@ -1,4 +1,4 @@
-const objectDeepEquals = (apple, orange) => {
+const deepEquals = (apple, orange) => {
   if ((typeof apple || typeof orange) !== 'object') {
     // Reached un-nested value, check match
     return apple === orange;
@@ -8,7 +8,7 @@ const objectDeepEquals = (apple, orange) => {
   }
 
   for (const key in apple) {
-    if (!objectDeepEquals(apple[key], orange[key])) {
+    if (!deepEquals(apple[key], orange[key])) {
       // Found a difference in a deeper nesting
       return false;
     }
