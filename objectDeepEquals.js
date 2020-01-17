@@ -8,7 +8,7 @@ const objectDeepEquals = (apple, orange) => {
   }
 
   for (const key in apple) {
-    if (!deepEquals(apple[key], orange[key])) {
+    if (!objectDeepEquals(apple[key], orange[key])) {
       // Found a difference in a deeper nesting
       return false;
     }
