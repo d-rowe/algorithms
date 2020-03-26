@@ -1,0 +1,23 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Personal repository for algorithm and toy problems",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-rowe/algorithms.git"
+  },
+  "author": "Daniel Rowe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d-rowe/algorithms/issues"
+  },
+  "homepage": "https://github.com/d-rowe/algorithms#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
+}
