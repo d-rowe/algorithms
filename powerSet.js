@@ -17,12 +17,12 @@
  * -> ["", "j", "ju", "jm", "jp", "jmu", "jmp", "jpu", "jmpu", "u", "m", "p", "mu", "mp", "pu", "mpu"]
  */
 
-const powerSet = str => {
-  const charArray = [...new Set(str.slice(''))];
-  let sets = [''];
+const powerSet = (str) => {
+  const charArray = [...new Set(str)];
+  const sets = [''];
 
   const addChars = (word, startIndex) => {
-    for (let i = startIndex; i < charArray.length; i++) {
+    for (let i = startIndex; i < charArray.length; i += 1) {
       const char = charArray[i];
       const newWord = word + char;
 
