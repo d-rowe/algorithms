@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/islands.js",
+      "program": "${file}",
       "runtimeExecutable": "/home/daniel/.nvm/versions/node/v12.16.1/bin/node"
     }
   ]
