@@ -9,10 +9,10 @@ const generateParentheses = (n) => {
       return;
     }
 
-    buildParentheses(parenStr + '(', openCount + 1)
+    buildParentheses(`${parenStr}(`, openCount + 1);
 
     if (openCount > 0) {
-      buildParentheses(parenStr + ')', openCount - 1);
+      buildParentheses(`${parenStr})`, openCount - 1);
     }
   };
 
