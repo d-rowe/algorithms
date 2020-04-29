@@ -1,7 +1,7 @@
 const distinctIslands = (grid) => {
   const workingGrid = [...grid];
   const shapes = new Set();
-  let currentShape = '';
+  let currentShape;
 
   const flood = (rowIndex, colIndex, direction) => {
     if (rowIndex < 0 || colIndex < 0) return;
