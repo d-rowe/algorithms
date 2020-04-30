@@ -17,8 +17,8 @@ const sumArray = (array) => {
   array.forEach((num) => {
     sum += num;
 
-    if (num > sum) { sum = num }
-    if (sum > max) { max = sum }
+    if (num > sum) { sum = num; }
+    if (sum > max) { max = sum; }
   });
 
   return max;
